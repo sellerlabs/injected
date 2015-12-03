@@ -68,7 +68,7 @@ To test this class, we'll have to do one of two things:
 
 `InjectedTrait` allows you to painlessly achieve option 2. Let's take a look:
 
-```
+```php
 /**
  * Class InjectedExample
  *
