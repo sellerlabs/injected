@@ -10,15 +10,19 @@ Automatic mocked dependency injection for testing
 
 The following pattern is very common:
 
-1. Create a class A with its dependencies (service objects) passed in through the constructor
+1. Create a class `A` with its dependencies (service objects) passed in through the constructor
 2. Use these services in various functions internal to the object
-3. Create tests that mock out each of A's dependencies, asserting that they are called as expected.
+3. Create tests that mock out each of `A`'s dependencies, asserting that they are called as expected.
 
 A lot of the testing logic ends up being boilerplate for constructing an object. `InjectedTrait` aims to remove this boilerplate entirely, letting you focus on what matters: the tests themselves.
 
 ### Getting Started
 
-TODO: Add install instructions
+Use `composer` to get the latest release (you'll probably only need it for development):
+
+```
+$ composer require sellerlabs/injected --dev
+```
 
 ### Example Usage
 
