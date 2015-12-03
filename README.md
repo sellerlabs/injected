@@ -127,4 +127,6 @@ public function __construct(EmailService $service)
 
 For the duration of the test case, the `$service` member variable is bound to this mocked `EmailService`, which allows us to make expectations about what happens with it when the `signUp` method of the controller gets called. We use `Mockery` in order to create the mocked objects. There are some annotations in the class comment, which help with IDE autocompletion for these classes since the mock properties are declared dynamically.
 
+This example lives in `tests/InjectedExample.php`. Feel free to poke around!
+
 The impact of this trait may seem relatively small, but when working on large applications where classes have several dependencies, this makes testing _much_ easier.
