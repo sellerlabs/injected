@@ -46,13 +46,16 @@ trait InjectedTrait
     /**
      * Make an instance of $this->className
      *
+     * @param array $parameters
+     *
      * @return mixed
      *
      * @throws Exception
      */
-    protected function make()
+    protected function make(array $parameters = [])
     {
         $dependencies = $this->mockDependencies();
+        $dependencies = array_merge($dependencies, $parameters);
 
         // Note: Must be defined in trait-using class
         $className = $this->className;
