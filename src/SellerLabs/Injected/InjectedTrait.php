@@ -36,8 +36,10 @@ trait InjectedTrait
 
         $dependencies = [];
 
-        foreach ($constructor->getParameters() as $param) {
-            $dependencies[$param->getClass()->getName()] = $param->getName();
+        if (!is_null($constructor)) {
+            foreach ($constructor->getParameters() as $param) {
+                $dependencies[$param->getClass()->getName()] = $param->getName();
+            }
         }
 
         return $dependencies;
