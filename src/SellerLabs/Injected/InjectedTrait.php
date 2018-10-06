@@ -29,7 +29,7 @@ trait InjectedTrait
      *
      * @throws Exception
      */
-    protected function getDependencies()
+    protected function getDependencyMapping()
     {
         $constructor = (new ReflectionClass($this->className))
             ->getConstructor();
@@ -76,7 +76,7 @@ trait InjectedTrait
      */
     protected function mockDependencies()
     {
-        $dependencies = $this->getDependencies();
+        $dependencies = $this->getDependencyMapping();
 
         foreach ($dependencies as $interface => $memberName) {
             if (!isset($this->$memberName)) {
